@@ -1,0 +1,41 @@
+/*
+
+Brainfuck equivalents for OwOScript
+
+*/
+
+
+// > Move pointer right
+literal 1;
+add;
+
+// < Move pointer left
+literal 1;
+sub;
+
+// + Increment cell
+dupe;
+dupe;
+get;
+literal 1;
+add;
+store;
+
+// - Decrement cell
+dupe;
+dupe;
+get;
+literal 1;
+sub;
+store;
+
+// . Output char
+print;
+
+// , Input char
+input;
+
+// [ ] Begin and end while loop
+while {
+    //statements
+}

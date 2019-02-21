@@ -1,0 +1,10 @@
+// Truth machine
+// When a truthy number is inputted, continue printing it forever
+// Otherwise print and stop
+inputnum;
+dupe;
+printnum;
+while {
+    dupe;
+    printnum;
+}
