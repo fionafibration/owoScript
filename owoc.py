@@ -189,8 +189,7 @@ if __name__ == '__main__':
     else:
         try:
             sys.stdout.write(code_to_owos(args.file.read()))
-        except Exception as e:
-            raise e
+        except:
             sys.stderr.write('Invalid owoScript pseudocode!')
 
 

@@ -2,6 +2,8 @@
 
 Brainfuck equivalents for OwOScript
 
+Stack is used to hold current pointer while hashmap is used for cells
+
 */
 
 
