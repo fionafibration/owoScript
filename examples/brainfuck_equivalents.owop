@@ -32,13 +32,21 @@ sub;
 store;
 
 // . Output char
+dupe;
+get;
 print;
 
 // , Input char
+dupe;
 input;
+store;
 
 // [ ] Begin and end while loop
+dupe;
+get;
 while {
+    discard;
     //statements
-    nop;
+    dupe;
+    get;
 }

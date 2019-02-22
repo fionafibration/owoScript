@@ -74,7 +74,9 @@ COMMAND_LIST = [
         'stop;',
         'pushdupe;',
         'fetchdupe;',
-        'nop;'
+        'nop;',
+        'hexmult;',
+        'printhash;',
     ]
 
 COMMAND_LIST_INVERTED = dict({command: number for number, command in enumerate(COMMAND_LIST)})

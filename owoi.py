@@ -192,6 +192,14 @@ class OwOScriptExecutor(OwOScriptVisitor):
                 self.stack.insert(0, a)
             self.push(a)
 
+        elif command == 'hexmult':
+            b = self.pop()
+            a = self.pop()
+            self.push(a * 16 + b)
+
+        elif command == 'printhash':
+            self.output.write('%s' % self.vars)
+
         elif command == 'nop':
             pass
 

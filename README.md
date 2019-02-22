@@ -128,7 +128,9 @@ Commands are single word operations (except for number literals, see below)
 | stop       | a    | exits with return code a                                   |
 | fetchdupe  | a, b | same as fetch but doesn't remove number from inside stack  |
 | pushdupe   | a    | same as push but doesn't remove number from top of stack   |
-| nop        | None |  no operation, used for code clarity in if/else statements |
+| nop        | None | no operation, used for code clarity in if/else statements  |
+| hexmult    | a, b | a * 16 + b (hexadecimal digit appending)                   |
+| printhash  | None | prints entire hashmap                                      |
 
 ###### CLI Usage
 
@@ -173,15 +175,23 @@ sub;
 store;
 
 // . Output char
+dupe;
+get;
 print;
 
 // , Input char
+dupe;
 input;
+store;
 
 // [ ] Begin and end while loop
+dupe;
+get;
 while {
+    discard;
     //statements
-    nop;
+    dupe;
+    get;
 }
 ```
 
