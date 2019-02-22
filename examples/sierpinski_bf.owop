@@ -1,0 +1,583 @@
+// open 0 5
+dupe;
+get;
+while {
+	discard;
+	
+	// output 0
+	dupe;
+	get;
+	print;
+	
+	// sub 0 2
+	dupe;
+	dupe;
+	get;
+	literal 2;
+	sub;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// output 0
+	dupe;
+	get;
+	print;
+	
+	// output 0
+	dupe;
+	get;
+	print;
+	
+	// close 0 0
+	dupe;
+	get;
+}
+discard;
+
+// add 0 8
+dupe;
+dupe;
+get;
+literal 8;
+add;
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+store;
+
+// open 0 11
+dupe;
+get;
+while {
+	discard;
+	
+	// add 1 1
+	literal 1;
+	add;
+	dupe;
+	dupe;
+	get;
+	literal 1;
+	add;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// add 1 4
+	literal 1;
+	add;
+	dupe;
+	dupe;
+	get;
+	literal 4;
+	add;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// sub -2 1
+	literal 2;
+	sub;
+	dupe;
+	dupe;
+	get;
+	literal 1;
+	sub;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// close 0 7
+	dupe;
+	get;
+}
+discard;
+
+// add 1 2
+literal 1;
+add;
+dupe;
+dupe;
+get;
+literal 2;
+add;
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+store;
+
+// add 2 1
+literal 2;
+add;
+dupe;
+dupe;
+get;
+literal 1;
+add;
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+store;
+
+// move 0 -1
+literal 1;
+sub;
+
+// open 0 22
+dupe;
+get;
+while {
+	discard;
+	
+	// sub 0 1
+	dupe;
+	dupe;
+	get;
+	literal 1;
+	sub;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// open 0 20
+	dupe;
+	get;
+	while {
+		discard;
+		
+		// add 2 1
+		literal 2;
+		add;
+		dupe;
+		dupe;
+		get;
+		literal 1;
+		add;
+		literal 1;
+		literal 0;
+		hexmult;
+		literal 0;
+		hexmult;
+		mod;
+		store;
+		
+		// sub -2 1
+		literal 2;
+		sub;
+		dupe;
+		dupe;
+		get;
+		literal 1;
+		sub;
+		literal 1;
+		literal 0;
+		hexmult;
+		literal 0;
+		hexmult;
+		mod;
+		store;
+		
+		// close 0 17
+		dupe;
+		get;
+	}
+	discard;
+	
+	// add 0 1
+	dupe;
+	dupe;
+	get;
+	literal 1;
+	add;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// close 2 15
+	literal 2;
+	add;
+	dupe;
+	get;
+}
+discard;
+
+// add 1 1
+literal 1;
+add;
+dupe;
+dupe;
+get;
+literal 1;
+add;
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+store;
+
+// open 0 53
+dupe;
+get;
+while {
+	discard;
+	
+	// sub 0 1
+	dupe;
+	dupe;
+	get;
+	literal 1;
+	sub;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// move 0 -3
+	literal 3;
+	sub;
+	
+	// open 0 47
+	dupe;
+	get;
+	while {
+		discard;
+		
+		// sub 0 1
+		dupe;
+		dupe;
+		get;
+		literal 1;
+		sub;
+		literal 1;
+		literal 0;
+		hexmult;
+		literal 0;
+		hexmult;
+		mod;
+		store;
+		
+		// move 0 1
+		literal 1;
+		add;
+		
+		// open 0 36
+		dupe;
+		get;
+		while {
+			discard;
+			
+			// add 0 1
+			dupe;
+			dupe;
+			get;
+			literal 1;
+			add;
+			literal 1;
+			literal 0;
+			hexmult;
+			literal 0;
+			hexmult;
+			mod;
+			store;
+			
+			// clear 0
+			dupe;
+			literal 0;
+			store;
+			
+			// add 0 1
+			dupe;
+			dupe;
+			get;
+			literal 1;
+			add;
+			literal 1;
+			literal 0;
+			hexmult;
+			literal 0;
+			hexmult;
+			mod;
+			store;
+			
+			// add 1 2
+			literal 1;
+			add;
+			dupe;
+			dupe;
+			get;
+			literal 2;
+			add;
+			literal 1;
+			literal 0;
+			hexmult;
+			literal 0;
+			hexmult;
+			mod;
+			store;
+			
+			// sub 3 1
+			literal 3;
+			add;
+			dupe;
+			dupe;
+			get;
+			literal 1;
+			sub;
+			literal 1;
+			literal 0;
+			hexmult;
+			literal 0;
+			hexmult;
+			mod;
+			store;
+			
+			// close -2 30
+			literal 2;
+			sub;
+			dupe;
+			get;
+		}
+		discard;
+		
+		// scanl -1
+		literal 1;
+		sub;
+		
+		// open 0
+		dupe;
+		get;
+		while {
+			discard;
+			
+			// move 0 -1
+			literal 1;
+			sub;
+			
+			// close 0
+			dupe;
+			get;
+		}
+		discard;
+		
+		// add 2 6
+		literal 2;
+		add;
+		dupe;
+		dupe;
+		get;
+		literal 6;
+		add;
+		literal 1;
+		literal 0;
+		hexmult;
+		literal 0;
+		hexmult;
+		mod;
+		store;
+		
+		// open 0 42
+		dupe;
+		get;
+		while {
+			discard;
+			
+			// add -2 5
+			literal 2;
+			sub;
+			dupe;
+			dupe;
+			get;
+			literal 5;
+			add;
+			literal 1;
+			literal 0;
+			hexmult;
+			literal 0;
+			hexmult;
+			mod;
+			store;
+			
+			// sub 2 1
+			literal 2;
+			add;
+			dupe;
+			dupe;
+			get;
+			literal 1;
+			sub;
+			literal 1;
+			literal 0;
+			hexmult;
+			literal 0;
+			hexmult;
+			mod;
+			store;
+			
+			// close 0 39
+			dupe;
+			get;
+		}
+		discard;
+		
+		// add 0 1
+		dupe;
+		dupe;
+		get;
+		literal 1;
+		add;
+		literal 1;
+		literal 0;
+		hexmult;
+		literal 0;
+		hexmult;
+		mod;
+		store;
+		
+		// add -2 2
+		literal 2;
+		sub;
+		dupe;
+		dupe;
+		get;
+		literal 2;
+		add;
+		literal 1;
+		literal 0;
+		hexmult;
+		literal 0;
+		hexmult;
+		mod;
+		store;
+		
+		// output 0
+		dupe;
+		get;
+		print;
+		
+		// clear 0
+		dupe;
+		literal 0;
+		store;
+		
+		// close -2 27
+		literal 2;
+		sub;
+		dupe;
+		get;
+	}
+	discard;
+	
+	// output 1
+	literal 1;
+	add;
+	dupe;
+	get;
+	print;
+	
+	// add 1 1
+	literal 1;
+	add;
+	dupe;
+	dupe;
+	get;
+	literal 1;
+	add;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// open 0 51
+	dupe;
+	get;
+	while {
+		discard;
+		
+		// close 2 50
+		literal 2;
+		add;
+		dupe;
+		get;
+	}
+	discard;
+	
+	// add 1 1
+	literal 1;
+	add;
+	dupe;
+	dupe;
+	get;
+	literal 1;
+	add;
+	literal 1;
+	literal 0;
+	hexmult;
+	literal 0;
+	hexmult;
+	mod;
+	store;
+	
+	// close 0 24
+	dupe;
+	get;
+}
+discard;
+
+// open 0 56
+dupe;
+get;
+while {
+	discard;
+	
+	// output 0
+	dupe;
+	get;
+	print;
+	
+	// close 0 54
+	dupe;
+	get;
+}
+discard;

@@ -3,12 +3,15 @@ from OwOScriptGrammar.OwOScriptParser import OwOScriptParser
 from OwOScriptGrammar.OwOScriptLexer import OwOScriptLexer
 from antlr4 import *
 
-
 import sys
-
+import string
 
 class OwOScriptExecutor(OwOScriptVisitor):
-    def __init__(self):
+    def __init__(self, token_stream, debug=False):
+        self.debug = debug
+        self.token_stream = token_stream
+        self.out = ''
+        self.code = ''
         self.stack = []
         self.output = sys.stdout
         self.input = sys.stdin
@@ -23,25 +26,51 @@ class OwOScriptExecutor(OwOScriptVisitor):
     def push(self, var):
         return self.stack.append(var)
 
+    def indent(self, code):
+        indented_string = ''
+        indent = 1
+
+        for line in code.split('\n'):
+            if '}' in line:
+                indent -= 1
+            indented_string += '\t' * indent + line + '\n'
+            if '{' in line:
+                indent += 1
+
+        return indented_string
+
+    def visitScript(self, ctx: OwOScriptParser.ScriptContext):
+        self.code = self.indent(
+            ctx.getText()
+                .replace(';', ';\n')
+                .replace('{', ' {\n')
+                .replace('}', '}\n')
+        )
+        return self.visitChildren(ctx)
+
     def visitNumber(self, ctx: OwOScriptParser.NumberContext):
         try:
             self.push(int(ctx.getChild(1).getText(), 16))
         except:
             pass
+        self.print_info(ctx)
         return self.visitChildren(ctx)
 
-    def visitWhileloop(self, ctx:OwOScriptParser.WhileloopContext):
+    def visitWhileloop(self, ctx: OwOScriptParser.WhileloopContext):
         while self.stack[-1]:
             self.visitChildren(ctx.getChild(2))
+        self.print_info(ctx)
 
-    def visitTernary(self, ctx:OwOScriptParser.TernaryContext):
+    def visitTernary(self, ctx: OwOScriptParser.TernaryContext):
         if self.pop():
             self.visitChildren(ctx.getChild(2))
         else:
             self.visitChildren(ctx.getChild(6))
+        self.print_info(ctx)
 
-    def visitCommand(self, ctx:OwOScriptParser.CommandContext):
-        return self.exec(ctx.getText().lower())
+    def visitCommand(self, ctx: OwOScriptParser.CommandContext):
+        self.exec(ctx.getText().lower())
+        self.print_info(ctx)
 
     def exec(self, command):
         if command == 'add':
@@ -80,11 +109,17 @@ class OwOScriptExecutor(OwOScriptVisitor):
 
         elif command == 'print':
             a = self.pop()
-            self.output.write(chr(a))
+            if self.debug:
+                self.out += chr(a)
+            else:
+                self.output.write(chr(a))
 
         elif command == 'printnum':
             a = self.pop()
-            self.output.write(str(a))
+            if self.debug:
+                self.out += str(a)
+            else:
+                self.output.write(str(a))
 
         elif command == 'printstack':
             self.output.write(str(self.stack))
@@ -206,8 +241,23 @@ class OwOScriptExecutor(OwOScriptVisitor):
         else:
             raise ValueError('Unknown command %s' % command)
 
+    def print_info(self, ctx):
+        if not self.debug:
+            return
+        print('\n' * 50)
+        print('Code:')
+        print(self.code)
+        print('\n\nStack:')
+        print(' | '.join([str(item) for item in self.stack]))
+        print(' | '.join([chr(item) if 32 <= item <= 127 else ' ' for item in self.stack]))
+        print('\nHashmap:')
+        print(', '.join(['%s: %s' % (key, value) for key, value in self.vars.items()]))
 
-def run_owo_pseudocode(code):
+        print('Output:')
+        print(self.out)
+        input()
+
+def run_owo_pseudocode(code, debug):
     lexer = OwOScriptLexer(InputStream(code))
     stream = CommonTokenStream(lexer)
     parser = OwOScriptParser(stream)
@@ -216,8 +266,10 @@ def run_owo_pseudocode(code):
 
     tree = parser.script()
 
-    visitor = OwOScriptExecutor()
+    visitor = OwOScriptExecutor(stream, debug)
     try:
         visitor.visit(tree)
+        if debug:
+            print('Completed')
     except Exception as e:
-        return str(e)
+        raise e

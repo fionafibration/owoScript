@@ -111,12 +111,22 @@ def owos_to_code(owos):
     iters = [iter(owos)] * 2
     owos = list(itertools.zip_longest(*iters))
 
-    pseudocode = ''
+    pseudocode = []
 
     for pair in owos:
-        pseudocode += num_to_command(owo_pair_to_num(*pair))
+        pseudocode.append(num_to_command(owo_pair_to_num(*pair)))
 
-    return pseudocode
+    formatted_pseudocode = ''
+    indent = 0
+
+    for line in pseudocode:
+        if '}' in line:
+            indent -= 1
+        formatted_pseudocode += '\t' * indent + line + '\n'
+        if '{' in line:
+            indent += 1
+
+    return formatted_pseudocode
 
 
 class OwOScriptConverter(OwOScriptVisitor):

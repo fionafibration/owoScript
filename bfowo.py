@@ -18,7 +18,8 @@ OPCODE_SCANL  = 11
 OPCODE_SCANR = 12
 
 class BFIToOwO:
-    def __init__(self, opcodes):
+    def __init__(self, opcodes, wrapping):
+        self.wrapping = wrapping
         self.indent = 0
         self.out = ''
         self.opcodes = opcodes
@@ -53,6 +54,7 @@ class BFIToOwO:
             self._out('get;')
             self.indent -= 1
             self._out('}')
+            self._out('discard;')
         elif opcode.code == OPCODE_ADD:
             self._move(opcode.move)
             self._out('dupe;')
@@ -68,11 +70,13 @@ class BFIToOwO:
             self._out('get;')
             self._number(opcode.value)
             self._out('sub;')
+            self._wrap()
             self._out('store;')
         elif opcode.code == OPCODE_INPUT:
             self._move(opcode.move)
             self._out('dupe;')
             self._out('input;')
+            self._wrap()
             self._out('store;')
         elif opcode.code == OPCODE_OUTPUT:
             self._move(opcode.move)
@@ -101,7 +105,7 @@ class BFIToOwO:
             for move, value in moves_to_values:
                 self._move(move)
                 self._out('dupe;')
-                self._number(value)
+                self._wrap()
                 self._out('store;')
 
         elif opcode.code == OPCODE_SCANL:
@@ -131,6 +135,11 @@ class BFIToOwO:
         for line in number_rep(number).split('\n'):
             self._out(line)
 
+    def _wrap(self):
+        if self.wrapping:
+            self._out('add;')
+            self._number(256)
+            self._out('mod;')
 
 def number_rep(number):
     def literal(hex_digit):
@@ -144,6 +153,9 @@ if __name__ == '__main__':
 
     parser.add_argument('file', type=argparse.FileType('r'), nargs='?',
                         default=sys.stdin, help='Brainfuck file to _convert to owoScript')
+    parser.add_argument('--no-wrapping', '-w', action='store_false', default=True, dest='wrapping',
+                        help='Disable the generation of wrapping code. If not used, wrapping will default'
+                             ' to 8 bit unsigned cells')
 
     args = parser.parse_args()
 
@@ -151,13 +163,7 @@ if __name__ == '__main__':
 
     parsed = parse(program)
 
-    """parsed = [
-        Opcode(OPCODE_COPY, 0, {0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 1, 6: 1, 7: 1}),
-        Opcode(OPCODE_SCANR, -7)
-    ]"""
-
-
-    owogenerator = BFIToOwO(parsed)
+    owogenerator = BFIToOwO(parsed, args.wrapping)
 
     sys.stdout.write(owogenerator.dump())
 

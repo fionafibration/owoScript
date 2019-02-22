@@ -10,6 +10,8 @@ if __name__ == '__main__':
     argparser.add_argument('file', type=argparse.FileType('r'), help='File with OwO code')
     argparser.add_argument('--pseudo', '-p', action='store_true', default=False,
                            help='Whether to run OwO bytecode or pseudocode. Use this for testing without having to compile')
+    argparser.add_argument('--debug', '-d', action='store_true', default=False,
+                           help='Debug mode.')
 
     args = argparser.parse_args()
 
@@ -19,4 +21,4 @@ if __name__ == '__main__':
     else:
         decompiled_code = code
 
-    run_owo_pseudocode(decompiled_code)
+    run_owo_pseudocode(decompiled_code, args.debug)

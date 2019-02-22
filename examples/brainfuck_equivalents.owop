@@ -20,6 +20,17 @@ dupe;
 dupe;
 get;
 literal 1;
+
+/*
+Mod 256 wrapping if desired
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+*/
+
 add;
 store;
 
@@ -28,6 +39,17 @@ dupe;
 dupe;
 get;
 literal 1;
+
+/*
+Mod 256 wrapping if desired
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+*/
+
 sub;
 store;
 
@@ -50,3 +72,4 @@ while {
     dupe;
     get;
 }
+discard;

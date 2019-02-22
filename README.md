@@ -41,7 +41,8 @@ literal 8;
 literal 2;
 div;
 ```
-corresponds to 8 / 2, not 2 / 8. 
+corresponds to 8 / 2, not 2 / 8. However, in addition to the stack, an optional "hashmap", 
+mapping integer keys to integer values, is available through the `store` and `get` commands
 
 ###### Arithmetic 
 
@@ -103,6 +104,7 @@ Commands are single word operations (except for number literals, see below)
 
 | Keyword    | Pops | Pushes                                                     |
 |------------|------|------------------------------------------------------------|
+| literal <x>| None | hex value of x, x must be single hex digit (0-9, a-f)
 | add        | a, b | a + b                                                      |
 | sub        | a, b | a - b                                                      |
 | mult       | a, b | a * b                                                      |
@@ -135,7 +137,15 @@ Commands are single word operations (except for number literals, see below)
 ###### CLI Usage
 
 The python script `owo.py` is used for running owoScript bytecode or psuedocode, while the python
-script `owoc.py` is the compiler/decompiler used to transform code from pseudocode or bytecode
+script `owoc.py` is the compiler/decompiler used to transform code from pseudocode or bytecode.
+
+The script `bfowo.py` is used to convert brainfuck programs into owoscript. This conversion is moderately optimized, 
+but is still less efficient than really writing in owoscript would be. 
+
+A command line option can be used to specify whether you'd like the transpiler to "wrap" the brainfuck cells 
+(like an 8-bit unsigned int) or whether you'd like python-style ints.
+
+See `sierpinski_bf.owop` and `mandelbrot_bf.owop` for examples of these conversions.
 
 ###### Turing completeness
 owoScript is provably Turing complete, via a simple reduction to brainfuck
@@ -163,6 +173,17 @@ dupe;
 dupe;
 get;
 literal 1;
+
+/*
+Mod 256 wrapping if desired
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+*/
+
 add;
 store;
 
@@ -171,6 +192,17 @@ dupe;
 dupe;
 get;
 literal 1;
+
+/*
+Mod 256 wrapping if desired
+literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+*/
+
 sub;
 store;
 
@@ -193,6 +225,7 @@ while {
     dupe;
     get;
 }
+discard;
 ```
 
 ### Why
