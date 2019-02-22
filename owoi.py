@@ -173,6 +173,28 @@ class OwOScriptExecutor(OwOScriptVisitor):
             a = self.pop()
             self.push(self.vars.get(a, 0))
 
+        elif command == 'stop':
+            sys.exit(self.pop())
+
+        elif command == 'fetchdupe':
+            a = self.pop()
+            if 0 < a < len(self.stack):
+                self.push(self.stack[len(self.stack) - a - 1])
+            elif a >= len(self.stack):
+                self.push(self.stack[0])
+
+        elif command == 'pushdupe':
+            b = self.pop()
+            a = self.pop()
+            if 0 < b < len(self.stack):
+                self.stack.insert(len(self.stack) - b, a)
+            elif b > len(self.stack):
+                self.stack.insert(0, a)
+            self.push(a)
+
+        elif command == 'nop':
+            pass
+
         else:
             raise ValueError('Unknown command %s' % command)
 

@@ -71,6 +71,10 @@ COMMAND_LIST = [
         'fetch;',
         'store;',
         'get;',
+        'stop;',
+        'pushdupe;',
+        'fetchdupe;',
+        'nop;'
     ]
 
 COMMAND_LIST_INVERTED = dict({command: number for number, command in enumerate(COMMAND_LIST)})

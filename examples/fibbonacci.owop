@@ -1,0 +1,70 @@
+// First numbers with spaces
+
+literal 0;
+dupe;
+printnum;
+
+literal 4;
+literal 8;
+mult;
+print;
+
+literal 1;
+dupe;
+printnum;
+
+literal 4;
+literal 8;
+mult;
+print;
+
+literal 1;
+dupe;
+printnum;
+
+literal 4;
+literal 8;
+mult;
+print;
+
+while{
+    // Discard bottom of stack
+    literal 2;
+    fetch;
+    discard;
+
+    // Bring the two values duplicated so we can add them
+    // If stack is something like [2, 3] then it'll become [2, 3, 2, 3]
+    literal 1;
+    fetchdupe;
+
+    literal 1;
+    fetchdupe;
+
+    // Add
+    add;
+
+    // Check if greater than 2^10 (this is configurable)
+    dupe;
+    literal 2;
+    literal a;
+    exp;
+    gt;
+    if {
+        stop;
+    }
+    else{
+        nop;
+    }
+
+
+    // Print
+    dupe;
+    printnum;
+
+    //Space
+    literal 4;
+    literal 8;
+    mult;
+    print;
+}

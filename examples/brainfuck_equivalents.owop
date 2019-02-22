@@ -38,4 +38,5 @@ input;
 // [ ] Begin and end while loop
 while {
     //statements
+    nop;
 }
