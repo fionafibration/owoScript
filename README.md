@@ -88,10 +88,10 @@ while {
 If statements have the syntax 
 ```
 if {
-    // statements or nothing
+    // statements or nop;
 }
 else {
-    // statements or nothing
+    // statements or nop;
 }
 ```
 and pop the top value of the stack. If it is truthy, the first block is executed. Otherwise,
