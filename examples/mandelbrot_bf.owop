@@ -14,7 +14,6 @@ store;
 
 // copy 0 {1: 2, 4: 5, 5: 2, 6: 1}
 dupe;
-literal 2;
 literal 1;
 literal 0;
 hexmult;
@@ -25,18 +24,6 @@ store;
 literal 3;
 add;
 dupe;
-literal 5;
-literal 1;
-literal 0;
-hexmult;
-literal 0;
-hexmult;
-mod;
-store;
-literal 1;
-add;
-dupe;
-literal 2;
 literal 1;
 literal 0;
 hexmult;
@@ -48,6 +35,15 @@ literal 1;
 add;
 dupe;
 literal 1;
+literal 0;
+hexmult;
+literal 0;
+hexmult;
+mod;
+store;
+literal 1;
+add;
+dupe;
 literal 1;
 literal 0;
 hexmult;
@@ -287,7 +283,6 @@ while {
 	// copy 0 {9: 1}
 	dupe;
 	literal 1;
-	literal 1;
 	literal 0;
 	hexmult;
 	literal 0;
@@ -487,7 +482,6 @@ while {
 		// copy 0 {9: 1}
 		dupe;
 		literal 1;
-		literal 1;
 		literal 0;
 		hexmult;
 		literal 0;
@@ -557,7 +551,6 @@ while {
 		
 		// copy 0 {9: 1}
 		dupe;
-		literal 1;
 		literal 1;
 		literal 0;
 		hexmult;
@@ -1471,7 +1464,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -1481,7 +1473,6 @@ while {
 					literal 2;
 					add;
 					dupe;
-					literal 1;
 					literal 1;
 					literal 0;
 					hexmult;
@@ -1569,7 +1560,6 @@ while {
 				add;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -1589,7 +1579,6 @@ while {
 			literal 1;
 			add;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -1766,7 +1755,6 @@ while {
 				sub;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -1786,7 +1774,6 @@ while {
 			literal 3;
 			sub;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -2062,7 +2049,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -2072,7 +2058,6 @@ while {
 					literal 1;
 					add;
 					dupe;
-					literal 1;
 					literal 1;
 					literal 0;
 					hexmult;
@@ -2160,7 +2145,6 @@ while {
 				add;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -2180,7 +2164,6 @@ while {
 			literal 2;
 			add;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -2357,7 +2340,6 @@ while {
 				sub;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -2377,7 +2359,6 @@ while {
 			literal 3;
 			sub;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -4391,7 +4372,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -4401,7 +4381,6 @@ while {
 						literal 1;
 						add;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -4489,7 +4468,6 @@ while {
 					add;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -4509,7 +4487,6 @@ while {
 				literal 1;
 				add;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -4686,7 +4663,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -4706,7 +4682,6 @@ while {
 				literal 2;
 				sub;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -5130,7 +5105,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -5140,7 +5114,6 @@ while {
 						literal 2;
 						add;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -5228,7 +5201,6 @@ while {
 					add;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -5248,7 +5220,6 @@ while {
 				literal 1;
 				add;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -5425,7 +5396,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -5445,7 +5415,6 @@ while {
 				literal 3;
 				sub;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -6208,7 +6177,6 @@ while {
 			sub;
 			dupe;
 			literal 1;
-			literal 1;
 			literal 0;
 			hexmult;
 			literal 0;
@@ -6220,7 +6188,6 @@ while {
 			literal 5;
 			sub;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -7194,7 +7161,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -7336,7 +7302,6 @@ while {
 								literal b;
 								add;
 								dupe;
-								literal 1;
 								literal 1;
 								literal 0;
 								hexmult;
@@ -7542,7 +7507,6 @@ while {
 						add;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -7740,7 +7704,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -7882,7 +7845,6 @@ while {
 								literal a;
 								add;
 								dupe;
-								literal 1;
 								literal 1;
 								literal 0;
 								hexmult;
@@ -8087,7 +8049,6 @@ while {
 						literal 1;
 						sub;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -8351,7 +8312,6 @@ while {
 							add;
 							dupe;
 							literal 1;
-							literal 1;
 							literal 0;
 							hexmult;
 							literal 0;
@@ -8555,7 +8515,6 @@ while {
 					literal 1;
 					add;
 					dupe;
-					literal 1;
 					literal 1;
 					literal 0;
 					hexmult;
@@ -9203,7 +9162,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -9213,7 +9171,6 @@ while {
 						literal 1;
 						add;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -9301,7 +9258,6 @@ while {
 					add;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -9321,7 +9277,6 @@ while {
 				literal 1;
 				add;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -9498,7 +9453,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -9518,7 +9472,6 @@ while {
 				literal 2;
 				sub;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -10588,7 +10541,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -11194,7 +11146,6 @@ while {
 					literal 2;
 					sub;
 					dupe;
-					literal 1;
 					literal 1;
 					literal 0;
 					hexmult;
@@ -12133,7 +12084,6 @@ while {
 			sub;
 			dupe;
 			literal 1;
-			literal 1;
 			literal 0;
 			hexmult;
 			literal 0;
@@ -12145,7 +12095,6 @@ while {
 			literal 5;
 			sub;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -13110,7 +13059,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -13252,7 +13200,6 @@ while {
 								literal a;
 								add;
 								dupe;
-								literal 1;
 								literal 1;
 								literal 0;
 								hexmult;
@@ -13457,7 +13404,6 @@ while {
 						literal 1;
 						sub;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -13766,7 +13712,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -13908,7 +13853,6 @@ while {
 								literal b;
 								add;
 								dupe;
-								literal 1;
 								literal 1;
 								literal 0;
 								hexmult;
@@ -14113,7 +14057,6 @@ while {
 						literal 1;
 						add;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -14487,7 +14430,6 @@ while {
 							add;
 							dupe;
 							literal 1;
-							literal 1;
 							literal 0;
 							hexmult;
 							literal 0;
@@ -14691,7 +14633,6 @@ while {
 					literal 1;
 					add;
 					dupe;
-					literal 1;
 					literal 1;
 					literal 0;
 					hexmult;
@@ -15480,7 +15421,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -15490,7 +15430,6 @@ while {
 						literal 2;
 						add;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -15578,7 +15517,6 @@ while {
 					add;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -15598,7 +15536,6 @@ while {
 				literal 1;
 				add;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -15775,7 +15712,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -15795,7 +15731,6 @@ while {
 				literal 3;
 				sub;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -16071,7 +16006,6 @@ while {
 						sub;
 						dupe;
 						literal 1;
-						literal 1;
 						literal 0;
 						hexmult;
 						literal 0;
@@ -16081,7 +16015,6 @@ while {
 						literal 1;
 						add;
 						dupe;
-						literal 1;
 						literal 1;
 						literal 0;
 						hexmult;
@@ -16169,7 +16102,6 @@ while {
 					add;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -16189,7 +16121,6 @@ while {
 				literal 2;
 				add;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -16366,7 +16297,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -16386,7 +16316,6 @@ while {
 				literal 3;
 				sub;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -17823,7 +17752,6 @@ while {
 			// copy 0 {9: 1}
 			dupe;
 			literal 1;
-			literal 1;
 			literal 0;
 			hexmult;
 			literal 0;
@@ -18326,7 +18254,6 @@ while {
 				sub;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -18372,7 +18299,6 @@ while {
 				literal 5;
 				add;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -18551,7 +18477,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -18571,7 +18496,6 @@ while {
 				literal 6;
 				sub;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -18780,7 +18704,6 @@ while {
 				add;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -18940,7 +18863,6 @@ while {
 					sub;
 					dupe;
 					literal 1;
-					literal 1;
 					literal 0;
 					hexmult;
 					literal 0;
@@ -18960,7 +18882,6 @@ while {
 				literal 6;
 				sub;
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -19031,7 +18952,6 @@ while {
 				
 				// copy 0 {9: 1}
 				dupe;
-				literal 1;
 				literal 1;
 				literal 0;
 				hexmult;
@@ -19803,7 +19723,6 @@ while {
 				// copy 0 {9: 1}
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -19955,7 +19874,6 @@ while {
 		
 		// copy 0 {9: 1}
 		dupe;
-		literal 1;
 		literal 1;
 		literal 0;
 		hexmult;
@@ -20459,7 +20377,6 @@ while {
 			sub;
 			dupe;
 			literal 1;
-			literal 1;
 			literal 0;
 			hexmult;
 			literal 0;
@@ -20505,7 +20422,6 @@ while {
 			literal 6;
 			add;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -20684,7 +20600,6 @@ while {
 				sub;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -20704,7 +20619,6 @@ while {
 			literal 7;
 			sub;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -20913,7 +20827,6 @@ while {
 			add;
 			dupe;
 			literal 1;
-			literal 1;
 			literal 0;
 			hexmult;
 			literal 0;
@@ -21073,7 +20986,6 @@ while {
 				sub;
 				dupe;
 				literal 1;
-				literal 1;
 				literal 0;
 				hexmult;
 				literal 0;
@@ -21093,7 +21005,6 @@ while {
 			literal 7;
 			sub;
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -21164,7 +21075,6 @@ while {
 			
 			// copy 0 {9: 1}
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;
@@ -21953,7 +21863,6 @@ while {
 			
 			// copy 0 {9: 1}
 			dupe;
-			literal 1;
 			literal 1;
 			literal 0;
 			hexmult;

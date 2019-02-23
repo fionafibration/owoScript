@@ -62,6 +62,7 @@ class BFIToOwO:
             self._out('get;')
             self._number(opcode.value)
             self._out('add;')
+            self._wrap()
             self._out('store;')
         elif opcode.code == OPCODE_SUB:
             self._move(opcode.move)
@@ -137,7 +138,6 @@ class BFIToOwO:
 
     def _wrap(self):
         if self.wrapping:
-            self._out('add;')
             self._number(256)
             self._out('mod;')
 
