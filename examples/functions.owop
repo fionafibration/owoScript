@@ -1,0 +1,33 @@
+// Functions must come at beginning of file
+// They are not case sensitive
+func square {
+    dupe;
+    mult;
+    printnum;
+}
+
+func
+div {
+    div;
+}
+
+// Functions can call other functions
+
+func divmod {
+    literal 2;
+    dupedeep;
+    div();
+    literal 3;
+    push;
+    mod;
+}
+
+// Should result in 9
+literal 3;
+square();
+
+// Should result in 2
+literal 8;
+literal 3;
+divmod();
+printstack;

@@ -19,6 +19,11 @@ class OwOScriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by OwOScriptParser#definitions.
+    def visitDefinitions(self, ctx:OwOScriptParser.DefinitionsContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by OwOScriptParser#statement.
     def visitStatement(self, ctx:OwOScriptParser.StatementContext):
         return self.visitChildren(ctx)
@@ -34,8 +39,28 @@ class OwOScriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by OwOScriptParser#bignumber.
+    def visitBignumber(self, ctx:OwOScriptParser.BignumberContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by OwOScriptParser#integer.
+    def visitInteger(self, ctx:OwOScriptParser.IntegerContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by OwOScriptParser#command.
     def visitCommand(self, ctx:OwOScriptParser.CommandContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by OwOScriptParser#functioncall.
+    def visitFunctioncall(self, ctx:OwOScriptParser.FunctioncallContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by OwOScriptParser#definition.
+    def visitDefinition(self, ctx:OwOScriptParser.DefinitionContext):
         return self.visitChildren(ctx)
 
 

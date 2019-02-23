@@ -8,6 +8,7 @@ import string
 
 class OwOScriptExecutor(OwOScriptVisitor):
     def __init__(self, token_stream, debug=False):
+        self.functions = {}
         self.debug = debug
         self.token_stream = token_stream
         self.out = ''
@@ -38,6 +39,26 @@ class OwOScriptExecutor(OwOScriptVisitor):
                 indent += 1
 
         return indented_string
+
+    def visitBignumber(self, ctx:OwOScriptParser.BignumberContext):
+        try:
+            self.push(int(float(ctx.getChild(1).getText())))
+        except:
+            pass
+
+    def visitDefinition(self, ctx:OwOScriptParser.DefinitionContext):
+        func_name = ctx.getChild(1).getText()
+        func_body = ctx.getChild(3)
+        if func_name not in self.functions:
+            self.functions[func_name] = func_body
+
+    def visitFunctioncall(self, ctx:OwOScriptParser.FunctioncallContext):
+        func_name = ctx.getChild(0).getText()
+        if func_name in self.functions:
+            self.visitChildren(self.functions[func_name])
+        else:
+            sys.stderr.write('Unknown function %s' % func_name)
+            sys.exit()
 
     def visitScript(self, ctx: OwOScriptParser.ScriptContext):
         self.code = self.indent(

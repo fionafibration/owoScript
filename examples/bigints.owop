@@ -1,0 +1,3 @@
+number -2e3;
+number 123456789;
+printstack;

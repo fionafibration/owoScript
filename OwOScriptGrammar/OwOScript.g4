@@ -9,23 +9,34 @@ grammar OwOScript;
     Parser rules
 */
 
-script : statements EOF;
+script : definitions statements EOF;
 
 statements : statement*;
 
-statement : expression ';' 
+definitions: definition*;
+
+statement : expression ';'
           | ternary 
           | whileloop
           ;
 
 expression : number
+           | bignumber
            | command
-           | '(' expression ')'
+           | functioncall
            ;
 
-number : ('literal' | 'lit' | 'l') SINGLE_DIGIT;
+number : ('literal' | 'lit' | 'l') SINGLE_HEX_DIGIT;
+
+bignumber :  'number' integer;
+
+integer: ('+' | '-')? NUMBER;
 
 command : IDENTIFIER;
+
+functioncall: IDENTIFIER '()';
+
+definition: 'func' IDENTIFIER '{' statements '}';
 
 ternary : 'if' '{' statements '}' 'else' '{' statements '}';
 
@@ -45,13 +56,15 @@ WS : [ \n\t\r]+ -> channel(HIDDEN);
 
 fragment SEMICOLON : ';';
 
-SINGLE_DIGIT : '0' .. '9' 
-             | 'a' .. 'f' 
-             | 'A' .. 'F'
-             ;
+SINGLE_HEX_DIGIT : '0' .. '9'
+                 | 'a' .. 'f'
+                 | 'A' .. 'F'
+                 ;
 
-fragment LETTER : 'a' .. 'z' 
-                | 'A' .. 'Z'
-                ;
+NUMBER : ('0' .. '9') + (('e' | 'E') NUMBER)*;
+
+LETTER : 'a' .. 'z'
+       | 'A' .. 'Z'
+       ;
 
 IDENTIFIER : LETTER+;

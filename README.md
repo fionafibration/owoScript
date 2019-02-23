@@ -4,13 +4,13 @@ owoScript is a stack based, imperative, and Turing complete programming language
 owoScript works with a simple and descriptive language 
 that is then compiled to the best bytecode to ever exist on this planet.
 
-Why is owoScript bytecode the best on the planet? Because it's entirely made out of 
+Why is owoScript bytecode the best on the planet? Because it's entirely made _out of 
 OwO faces! Why have the speed and portability of the JVM when you can have the most *adorable* 
-code out of almost any language you can write in? And never fear, your owoScript bytecode can easily be turned
+code _out of almost any language you can write in? And never fear, your owoScript bytecode can easily be turned
 back into the higher level form at any time.
 
 Additionally, owoScript leaves its syntax and parsing files easily accessible to be inspected and verified by 
-anyone. owoScript's grammar is written in ANTLR4, a parsing tool so out of this world reliable and efficient that 
+anyone. owoScript's grammar is written in ANTLR4, a parsing tool so _out of this world reliable and efficient that 
 you'll wonder why your favorite programming language isn't using it yet.
 
 ### Examples
@@ -48,7 +48,7 @@ mapping integer keys to integer values, is available through the `store` and `ge
 
 Because owoScript is stack-based, arithmetic is performed in postfix notation.
 This means that writing something like (2+3)*(5/7)
-is written by taking the operator out of the middle of the expression and adding it on to the end.
+is written by taking the operator _out of the middle of the expression and adding it on to the end.
 So 2+3 is written as `literal 2; literal 3; add;` and 5/7 is written as `literal 5; literal 7; div;`
 
 The final expression would thus be written as:
@@ -65,7 +65,7 @@ mult;
 
 ##### Flow control
 
-Flow control is provided in `while` loops and `if {} else {}` statements
+Flow control is provided in `while` loops, functions, and `if {} else {}` statements
 
 While loops simply repeat the operation inside them until the top of the stack is 0, or falsy.
 They do not pop values, and instead simply inspect the stack without changing it. While loops are skipped
@@ -85,6 +85,19 @@ while {
 }
 ```
 
+Functions are defined at the top of the file and called like so, 
+and can call other functions. Putting a function anywhere other than 
+at the top of the file will result in very undefined behavior.
+Functions do not take argument, and simply operate off of the stack.
+```
+func square {
+    dupe;
+    mult;
+}
+literal 3;
+square();
+```
+
 If statements have the syntax 
 ```
 if {
@@ -100,11 +113,12 @@ the second one is.
 
 ##### Commands
 
-Commands are single word operations (except for number literals, see below)
+Commands are single word operations (except for number literals and bignumber literals, see below)
 
 | Keyword    | Pops | Pushes                                                     |
 |------------|------|------------------------------------------------------------|
 | literal x  | None | hex value of x, x must be single hex digit (0-9, a-f)      |
+| number x   | None | int value of x, x is signed number [*]                     |
 | add        | a, b | a + b                                                      |
 | sub        | a, b | a - b                                                      |
 | mult       | a, b | a * b                                                      |
@@ -135,6 +149,9 @@ Commands are single word operations (except for number literals, see below)
 | nop        | None | no operation, used for code clarity in if/else statements  |
 | hexmult    | a, b | a * 16 + b (hexadecimal digit appending)                   |
 | printhash  | None | prints entire hashmap                                      |
+
+\* these number literals will be less space efficient in OwO form, so if your 
+number is representable by a single hex digit, that form is recommended.
 
 ##### CLI Usage
 
@@ -234,10 +251,10 @@ discard;
 "The only reason someone would do something like this if they could, which they can't, would be because they could, which they can't." - Rick Sanchez
 
 I'm sure the question everyone is thinking is "why." Why make a programming language entirely in OwO faces? 
-Why go out of my way to implement a formal grammar with a parser for a meme? 
+Why go _out of my way to implement a formal grammar with a parser for a meme? 
 
 The simple answer, of course, is because 
-I hate myself. The more accurate answer is because I wanted to try out writing a basic interpreter and grammar in
+I hate myself. The more accurate answer is because I wanted to try _out writing a basic interpreter and grammar in
 ANTLR, in preparation for possibly writing an LLVM compiler for a few esoteric programming languages in the near future
 
 ### Credits
