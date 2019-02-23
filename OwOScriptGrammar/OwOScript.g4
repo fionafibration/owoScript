@@ -23,7 +23,7 @@ expression : number
            | '(' expression ')'
            ;
 
-number : 'literal' SINGLE_DIGIT;
+number : ('literal' | 'lit' | 'l') SINGLE_DIGIT;
 
 command : IDENTIFIER;
 
