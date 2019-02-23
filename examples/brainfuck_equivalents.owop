@@ -20,6 +20,7 @@ dupe;
 dupe;
 get;
 literal 1;
+add;
 
 /*
 Mod 256 wrapping if desired
@@ -31,7 +32,6 @@ hexmult;
 mod;
 */
 
-add;
 store;
 
 // - Decrement cell
@@ -39,6 +39,7 @@ dupe;
 dupe;
 get;
 literal 1;
+sub;
 
 /*
 Mod 256 wrapping if desired
@@ -50,7 +51,6 @@ hexmult;
 mod;
 */
 
-sub;
 store;
 
 // . Output char

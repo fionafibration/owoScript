@@ -150,8 +150,7 @@ See `sierpinski_bf.owop` and `mandelbrot_bf.owop` for examples of these conversi
 ###### Turing completeness
 owoScript is provably Turing complete, via a simple reduction to brainfuck
 
-```
-/*
+```/*
 
 Brainfuck equivalents for OwOScript
 
@@ -173,6 +172,7 @@ dupe;
 dupe;
 get;
 literal 1;
+add;
 
 /*
 Mod 256 wrapping if desired
@@ -184,7 +184,6 @@ hexmult;
 mod;
 */
 
-add;
 store;
 
 // - Decrement cell
@@ -192,6 +191,7 @@ dupe;
 dupe;
 get;
 literal 1;
+sub;
 
 /*
 Mod 256 wrapping if desired
@@ -203,7 +203,6 @@ hexmult;
 mod;
 */
 
-sub;
 store;
 
 // . Output char
