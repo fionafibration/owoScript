@@ -171,6 +171,14 @@ class OwOScriptExecutor(OwOScriptVisitor):
             self.push(a)
             self.push(a)
 
+        elif command == 'dupedeep':
+            a = self.pop()
+            if a >= 0:
+                self.stack.extend(self.stack[-a:])
+
+        elif command == 'stacklength':
+            self.push(len(self.stack))
+
         elif command == 'discard':
             self.pop()
 

@@ -122,10 +122,12 @@ Commands are single word operations (except for number literals, see below)
 | neq        | a, b | 1 if a != b else 0                                         |
 | cmp        | a, b | if a == b: 0, if a > b: 1, if a < b: -1                    |
 | dupe       | a    | a, a (a repeated)                                          |
+| dupedeep   | a    | extend stack with last a values on stack                   |
 | swap       | a, b | b, a (top two values swapped)                              |
 | push       | a, b | puts a *b* layers deep in the stack                        |
 | fetch      | a    | pulls the number *a* deep in the stack to the top          |
-| store      | a, b | stores b in the a slot in the hashmap                      |
+| stacklength| None | length of stack                                            |
+| store      | a, b | stores b in the *a* slot in the hashmap                    |
 | get        | a    | pushes the value stored in *a* slot in the hashmap         |
 | stop       | a    | exits with return code a                                   |
 | fetchdupe  | a, b | same as fetch but doesn't remove number from inside stack  |
