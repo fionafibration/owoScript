@@ -20,7 +20,7 @@ Can you trust it if it doesn't?)
 
 ### Usage
 
-###### Stack
+##### Stack
 
 owoScript is written in a descriptive language consisting of stack operations, number literals, 
 `while` loops, and `if {} else {}` statements.
@@ -44,7 +44,7 @@ div;
 corresponds to 8 / 2, not 2 / 8. However, in addition to the stack, an optional "hashmap", 
 mapping integer keys to integer values, is available through the `store` and `get` commands
 
-###### Arithmetic 
+##### Arithmetic 
 
 Because owoScript is stack-based, arithmetic is performed in postfix notation.
 This means that writing something like (2+3)*(5/7)
@@ -63,7 +63,7 @@ div;
 mult;
 ```
 
-###### Flow control
+##### Flow control
 
 Flow control is provided in `while` loops and `if {} else {}` statements
 
@@ -98,20 +98,20 @@ and pop the top value of the stack. If it is truthy, the first block is executed
 the second one is.
 
 
-###### Commands
+##### Commands
 
 Commands are single word operations (except for number literals, see below)
 
 | Keyword    | Pops | Pushes                                                     |
 |------------|------|------------------------------------------------------------|
-| literal <x>| None | hex value of x, x must be single hex digit (0-9, a-f)      |
+| literal x  | None | hex value of x, x must be single hex digit (0-9, a-f)      |
 | add        | a, b | a + b                                                      |
 | sub        | a, b | a - b                                                      |
 | mult       | a, b | a * b                                                      |
 | div        | a, b | a // b (floor division)                                    |
 | mod        | a, b | a % b (modulus)                                            |
 | exp        | a, b | a ^ b (exponent)                                           |
-| print      | a    | prints the character with code [a]                         |
+| print      | a    | prints the character with code *a*                         |
 | printnum   | a    | prints the number literally                                |
 | printstack | None | prints entire stack                                        |
 | input      | None | number of character read from stdin                        |
@@ -134,7 +134,7 @@ Commands are single word operations (except for number literals, see below)
 | hexmult    | a, b | a * 16 + b (hexadecimal digit appending)                   |
 | printhash  | None | prints entire hashmap                                      |
 
-###### CLI Usage
+##### CLI Usage
 
 The python script `owo.py` is used for running owoScript bytecode or psuedocode, while the python
 script `owoc.py` is the compiler/decompiler used to transform code from pseudocode or bytecode.
@@ -147,7 +147,7 @@ A command line option can be used to specify whether you'd like the transpiler t
 
 See `sierpinski_bf.owop` and `mandelbrot_bf.owop` for examples of these conversions.
 
-###### Turing completeness
+### Turing completeness
 owoScript is provably Turing complete, via a simple reduction to brainfuck
 
 ```/*
