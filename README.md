@@ -230,6 +230,9 @@ discard;
 ```
 
 ### Why
+
+"The only reason someone would do something like this if they could, which they can't, would be because they could, which they can't." - Rick Sanchez
+
 I'm sure the question everyone is thinking is "why." Why make a programming language entirely in OwO faces? 
 Why go out of my way to implement a formal grammar with a parser for a meme? 
 
