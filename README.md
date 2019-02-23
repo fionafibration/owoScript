@@ -104,7 +104,7 @@ Commands are single word operations (except for number literals, see below)
 
 | Keyword    | Pops | Pushes                                                     |
 |------------|------|------------------------------------------------------------|
-| literal <x>| None | hex value of x, x must be single hex digit (0-9, a-f)
+| literal <x>| None | hex value of x, x must be single hex digit (0-9, a-f)      |
 | add        | a, b | a + b                                                      |
 | sub        | a, b | a - b                                                      |
 | mult       | a, b | a * b                                                      |
