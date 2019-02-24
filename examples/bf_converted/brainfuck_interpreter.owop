@@ -6,11 +6,7 @@ dupe;
 get;
 literal 1;
 add;
-literal 1;
-literal 0;
-hexmult;
-literal 0;
-hexmult;
+number 256;
 mod;
 store;
 
@@ -38,11 +34,7 @@ while {
 	get;
 	literal 2;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -54,11 +46,7 @@ while {
 	get;
 	literal 1;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -70,11 +58,7 @@ while {
 	get;
 	literal 7;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -92,11 +76,7 @@ while {
 		get;
 		literal 4;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -108,11 +88,7 @@ while {
 		get;
 		literal 2;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -124,11 +100,7 @@ while {
 		get;
 		literal 1;
 		sub;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -144,11 +116,7 @@ while {
 	get;
 	literal 2;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -160,11 +128,7 @@ while {
 	get;
 	literal 1;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -176,11 +140,7 @@ while {
 	get;
 	literal 1;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -192,11 +152,7 @@ while {
 	get;
 	literal 5;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -214,11 +170,7 @@ while {
 		get;
 		literal 2;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -230,11 +182,7 @@ while {
 		get;
 		literal 6;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -246,11 +194,7 @@ while {
 		get;
 		literal 1;
 		sub;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -266,11 +210,7 @@ while {
 	get;
 	literal 1;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -279,11 +219,7 @@ while {
 	add;
 	dupe;
 	input;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -295,11 +231,7 @@ while {
 	get;
 	literal 2;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -331,11 +263,7 @@ while {
 				get;
 				literal 1;
 				sub;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -373,11 +301,7 @@ while {
 			get;
 			literal 1;
 			sub;
-			literal 1;
-			literal 0;
-			hexmult;
-			literal 0;
-			hexmult;
+			number 256;
 			mod;
 			store;
 			
@@ -415,11 +339,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -461,11 +381,7 @@ while {
 			get;
 			literal 1;
 			add;
-			literal 1;
-			literal 0;
-			hexmult;
-			literal 0;
-			hexmult;
+			number 256;
 			mod;
 			store;
 			
@@ -477,11 +393,7 @@ while {
 			get;
 			literal 1;
 			sub;
-			literal 1;
-			literal 0;
-			hexmult;
-			literal 0;
-			hexmult;
+			number 256;
 			mod;
 			store;
 			
@@ -505,11 +417,7 @@ while {
 					get;
 					literal 1;
 					add;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -521,11 +429,7 @@ while {
 					get;
 					literal 1;
 					sub;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -578,11 +482,7 @@ while {
 				get;
 				literal 2;
 				add;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -594,11 +494,7 @@ while {
 				get;
 				literal 1;
 				sub;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -616,11 +512,7 @@ while {
 					get;
 					literal 9;
 					add;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -642,11 +534,7 @@ while {
 						get;
 						literal 1;
 						sub;
-						literal 1;
-						literal 0;
-						hexmult;
-						literal 0;
-						hexmult;
+						number 256;
 						mod;
 						store;
 						
@@ -658,11 +546,7 @@ while {
 						get;
 						literal 1;
 						sub;
-						literal 1;
-						literal 0;
-						hexmult;
-						literal 0;
-						hexmult;
+						number 256;
 						mod;
 						store;
 						
@@ -790,11 +674,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -840,11 +720,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -856,11 +732,7 @@ while {
 		get;
 		literal 1;
 		sub;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -896,11 +768,7 @@ while {
 	get;
 	literal 1;
 	add;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	
@@ -916,11 +784,7 @@ while {
 		get;
 		literal 1;
 		sub;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -982,11 +846,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1006,11 +866,7 @@ while {
 			get;
 			literal 1;
 			add;
-			literal 1;
-			literal 0;
-			hexmult;
-			literal 0;
-			hexmult;
+			number 256;
 			mod;
 			store;
 			
@@ -1022,11 +878,7 @@ while {
 			get;
 			literal 1;
 			add;
-			literal 1;
-			literal 0;
-			hexmult;
-			literal 0;
-			hexmult;
+			number 256;
 			mod;
 			store;
 			
@@ -1038,11 +890,7 @@ while {
 			get;
 			literal 1;
 			sub;
-			literal 1;
-			literal 0;
-			hexmult;
-			literal 0;
-			hexmult;
+			number 256;
 			mod;
 			store;
 			
@@ -1060,11 +908,7 @@ while {
 				get;
 				literal 2;
 				sub;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1076,11 +920,7 @@ while {
 				get;
 				literal 1;
 				add;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1092,11 +932,7 @@ while {
 				get;
 				literal 1;
 				sub;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1114,11 +950,7 @@ while {
 					get;
 					literal 1;
 					add;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -1140,11 +972,7 @@ while {
 						get;
 						literal 1;
 						add;
-						literal 1;
-						literal 0;
-						hexmult;
-						literal 0;
-						hexmult;
+						number 256;
 						mod;
 						store;
 						
@@ -1156,11 +984,7 @@ while {
 						get;
 						literal 1;
 						sub;
-						literal 1;
-						literal 0;
-						hexmult;
-						literal 0;
-						hexmult;
+						number 256;
 						mod;
 						store;
 						
@@ -1200,11 +1024,7 @@ while {
 				get;
 				literal 1;
 				add;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1216,11 +1036,7 @@ while {
 				get;
 				literal 1;
 				sub;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1244,11 +1060,7 @@ while {
 		get;
 		literal 2;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1260,11 +1072,7 @@ while {
 		get;
 		literal 2;
 		sub;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1330,11 +1138,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1424,11 +1228,7 @@ while {
 			get;
 			literal 1;
 			add;
-			literal 1;
-			literal 0;
-			hexmult;
-			literal 0;
-			hexmult;
+			number 256;
 			mod;
 			store;
 			
@@ -1444,11 +1244,7 @@ while {
 				get;
 				literal 1;
 				sub;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1460,11 +1256,7 @@ while {
 				get;
 				literal 1;
 				add;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1476,11 +1268,7 @@ while {
 				get;
 				literal 1;
 				sub;
-				literal 1;
-				literal 0;
-				hexmult;
-				literal 0;
-				hexmult;
+				number 256;
 				mod;
 				store;
 				
@@ -1498,11 +1286,7 @@ while {
 					get;
 					literal 1;
 					add;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -1514,11 +1298,7 @@ while {
 					get;
 					literal 2;
 					add;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -1530,11 +1310,7 @@ while {
 					get;
 					literal 1;
 					sub;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -1552,11 +1328,7 @@ while {
 						get;
 						literal 1;
 						sub;
-						literal 1;
-						literal 0;
-						hexmult;
-						literal 0;
-						hexmult;
+						number 256;
 						mod;
 						store;
 						
@@ -1578,11 +1350,7 @@ while {
 							get;
 							literal 1;
 							add;
-							literal 1;
-							literal 0;
-							hexmult;
-							literal 0;
-							hexmult;
+							number 256;
 							mod;
 							store;
 							
@@ -1594,11 +1362,7 @@ while {
 							get;
 							literal 1;
 							sub;
-							literal 1;
-							literal 0;
-							hexmult;
-							literal 0;
-							hexmult;
+							number 256;
 							mod;
 							store;
 							
@@ -1638,11 +1402,7 @@ while {
 					get;
 					literal 1;
 					add;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -1654,11 +1414,7 @@ while {
 					get;
 					literal 1;
 					sub;
-					literal 1;
-					literal 0;
-					hexmult;
-					literal 0;
-					hexmult;
+					number 256;
 					mod;
 					store;
 					
@@ -1748,11 +1504,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1764,11 +1516,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1796,11 +1544,7 @@ while {
 		get;
 		literal 1;
 		sub;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1855,11 +1599,7 @@ while {
 		get;
 		literal 1;
 		sub;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1886,11 +1626,7 @@ while {
 		add;
 		dupe;
 		input;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1920,11 +1656,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1952,11 +1684,7 @@ while {
 		get;
 		literal 1;
 		add;
-		literal 1;
-		literal 0;
-		hexmult;
-		literal 0;
-		hexmult;
+		number 256;
 		mod;
 		store;
 		
@@ -1985,11 +1713,7 @@ while {
 	// input 0
 	dupe;
 	input;
-	literal 1;
-	literal 0;
-	hexmult;
-	literal 0;
-	hexmult;
+	number 256;
 	mod;
 	store;
 	

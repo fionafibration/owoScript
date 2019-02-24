@@ -33,7 +33,11 @@ class BFIToOwO:
         return self.out
 
     def _out(self, output):
+        if '}' in output:
+            self.indent -= 1
         self.out += '\t' * self.indent + output + '\n'
+        if '{' in output:
+            self.indent += 1
 
     def _convert(self, opcode):
         if self.out != '':
@@ -46,13 +50,11 @@ class BFIToOwO:
             self._out('dupe;')
             self._out('get;')
             self._out('while {')
-            self.indent += 1
             self._out('discard;')
         elif opcode.code == OPCODE_CLOSE:
             self._move(opcode.move)
             self._out('dupe;')
             self._out('get;')
-            self.indent -= 1
             self._out('}')
             self._out('discard;')
         elif opcode.code == OPCODE_ADD:
@@ -103,11 +105,38 @@ class BFIToOwO:
             # Keys are moves, values are things to put in
             moves_to_values = itertools.zip_longest([0] + moves, values, fillvalue=None)
 
+            self._out('dupe;')
+            self._out('get;')
+            self._out('dupe;')
+            self._out('if {')
+
+            self._out('swap;')
+            self._move(positions[0])
+
             for move, value in moves_to_values:
                 self._move(move)
                 self._out('dupe;')
+                self._out('dupe;')
+                self._number(value)
+                self._number(4)
+                self._out('fetchdupe;')
+                self._out('mult;')
+                self._out('swap;')
+                self._out('get;')
+                self._out('add;')
                 self._wrap()
                 self._out('store;')
+
+            self._out('swap;')
+            self._out('discard;')
+
+            self._move(-positions[-1])
+
+            self._convert(Opcode(OPCODE_CLEAR, 0))
+            self._out('}')
+            self._out('else {')
+            self._out('discard;')
+            self._out('}')
 
         elif opcode.code == OPCODE_SCANL:
             self._move(opcode.move)
@@ -133,8 +162,11 @@ class BFIToOwO:
             self._out('sub;')
 
     def _number(self, number):
-        for line in number_rep(number).split('\n'):
-            self._out(line)
+        if number < 16 and number > 0:
+            for line in number_rep(number).split('\n'):
+                self._out(line)
+        else:
+            self._out('number %s;' % number)
 
     def _wrap(self):
         if self.wrapping:

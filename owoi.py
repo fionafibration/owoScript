@@ -274,8 +274,9 @@ class OwOScriptExecutor(OwOScriptVisitor):
         if not self.debug:
             return
         print('\n' * 50)
-        print('Code:')
-        print(self.code)
+        if len(self.code) < 8000:
+            print('Code:')
+            print(self.code)
         print('\n\nStack:')
         print(' | '.join([str(item) for item in self.stack]))
         print(' | '.join([chr(item) if 32 <= item <= 127 else ' ' for item in self.stack]))
