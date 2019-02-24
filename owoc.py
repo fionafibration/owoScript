@@ -4,10 +4,7 @@ from OwOScriptGrammar.OwOScriptLexer import OwOScriptLexer
 from antlr4 import *
 from antlr4.error.ErrorListener import ErrorListener
 
-
-import random
 import itertools
-import owoi
 import sys
 import zigzag
 

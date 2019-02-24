@@ -1,6 +1,5 @@
 from owoi import run_owo_pseudocode
 from owoc import owos_to_code
-import sys
 import argparse
 
 
