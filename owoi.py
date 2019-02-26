@@ -7,8 +7,9 @@ import sys
 import string
 
 class OwOScriptExecutor(OwOScriptVisitor):
-    def __init__(self, token_stream, debug=False):
+    def __init__(self, token_stream, debug=False, wait=False):
         self.functions = {}
+        self.wait = wait
         self.debug = debug
         self.token_stream = token_stream
         self.out = ''
@@ -285,7 +286,8 @@ class OwOScriptExecutor(OwOScriptVisitor):
 
         print('Output:')
         print(self.out)
-        input()
+        if self.wait:
+            input()
 
 def run_owo_pseudocode(code, debug):
     lexer = OwOScriptLexer(InputStream(code))

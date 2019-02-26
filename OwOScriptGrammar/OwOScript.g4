@@ -9,7 +9,7 @@ grammar OwOScript;
 
 script : definitions statements EOF;
 
-statements : statement*;
+statements : statement+;
 
 definitions : definition*;
 
