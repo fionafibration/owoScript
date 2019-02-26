@@ -26,7 +26,7 @@ expression : number
 
 number : ('literal' | 'lit' | 'l') SINGLE_HEX_DIGIT;
 
-bignumber :  'number' integer;
+bignumber : 'number' integer;
 
 integer : NUMBER;
 
