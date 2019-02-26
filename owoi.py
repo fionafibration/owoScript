@@ -28,7 +28,8 @@ class OwOScriptExecutor(OwOScriptVisitor):
     def push(self, var):
         return self.stack.append(var)
 
-    def indent(self, code):
+    @staticmethod
+    def indent(code):
         indented_string = ''
         indent = 1
 
