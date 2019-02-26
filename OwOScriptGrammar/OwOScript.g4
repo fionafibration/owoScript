@@ -2,10 +2,8 @@ grammar OwOScript;
 
 /*
     This is the grammar for the OwOScript pseudocode,
-    before it is compiled into OwO format. 
- */
-
-/* 
+    before it is compiled into OwO format.
+     
     Parser rules
 */
 
@@ -13,7 +11,7 @@ script : definitions statements EOF;
 
 statements : statement*;
 
-definitions: definition*;
+definitions : definition*;
 
 statement : expression ';'
           | ternary 
@@ -30,13 +28,13 @@ number : ('literal' | 'lit' | 'l') SINGLE_HEX_DIGIT;
 
 bignumber :  'number' integer;
 
-integer: ('+' | '-')? NUMBER;
+integer : ('+' | '-')? NUMBER;
 
 command : IDENTIFIER;
 
-functioncall: IDENTIFIER '()';
+functioncall : IDENTIFIER '()';
 
-definition: 'func' IDENTIFIER '{' statements '}';
+definition : 'func' IDENTIFIER '{' statements '}';
 
 ternary : 'if' '{' statements '}' 'else' '{' statements '}';
 
