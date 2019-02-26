@@ -3,7 +3,7 @@ grammar OwOScript;
 /*
     This is the grammar for the OwOScript pseudocode,
     before it is compiled into OwO format.
-     
+
     Parser rules
 */
 
@@ -28,7 +28,7 @@ number : ('literal' | 'lit' | 'l') SINGLE_HEX_DIGIT;
 
 bignumber :  'number' integer;
 
-integer : ('+' | '-')? NUMBER;
+integer : NUMBER;
 
 command : IDENTIFIER;
 
@@ -52,17 +52,27 @@ HASH_COMMENT : '#' ~[\r\n]* -> skip;
 
 WS : [ \n\t\r]+ -> channel(HIDDEN);
 
-fragment SEMICOLON : ';';
-
 SINGLE_HEX_DIGIT : '0' .. '9'
                  | 'a' .. 'f'
                  | 'A' .. 'F'
                  ;
 
-NUMBER : ('0' .. '9') + (('e' | 'E') NUMBER)*;
-
-LETTER : 'a' .. 'z'
-       | 'A' .. 'Z'
+NUMBER : DECIMAL_INTEGER
+       | EXPONENT_INTEGER
        ;
+
+fragment DIGIT : [0-9];
+
+fragment NON_ZERO_DIGIT : [1-9];
+
+DECIMAL_INTEGER : ('+' | '-')? NON_ZERO_DIGIT DIGIT*
+                | '0'+
+                ;
+
+fragment EXPONENT : [eE] DECIMAL_INTEGER;
+
+fragment EXPONENT_INTEGER : DECIMAL_INTEGER EXPONENT;
+
+fragment LETTER : [a-zA-Z];
 
 IDENTIFIER : LETTER+;
