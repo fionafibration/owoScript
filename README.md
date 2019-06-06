@@ -259,3 +259,6 @@ ANTLR, in preparation for possibly writing an LLVM compiler for a few esoteric p
 
 ### Credits
 I dedicate this project to all of my friends who answer the phone with "hewwo" so often I want to bash my head in.
+
+### Final Note
+This project is mostly a joke I embarked on as a fun way of learning parsing and the basics of imperative language design. Any ridiculous statements inside this project are purely satire.
