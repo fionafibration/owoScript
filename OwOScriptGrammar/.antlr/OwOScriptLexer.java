@@ -1,4 +1,3 @@
-// Generated from c:\Users\finian_blackett\Documents\owoScript\OwOScriptGrammar\OwOScript.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
